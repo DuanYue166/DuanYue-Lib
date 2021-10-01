@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.py": "python",
+        "cstdio": "cpp",
+        "*.tcc": "cpp",
+        "fstream": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp"
+    }
+}
