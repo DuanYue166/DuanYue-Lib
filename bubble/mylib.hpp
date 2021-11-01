@@ -17,7 +17,7 @@ inline void resize_(PIMAGE &src,int &dstx,int &dsty,PIMAGE &dst){
 	resize(src,dstx,dsty,dst);
 }
 
-class obj{
+class object{
 private:
 	PIMAGE texture;
 	int sx,sy;			//size
@@ -28,29 +28,30 @@ public:
 	void resize(int dstx,int dsty);
 	void draw(int x,int y) {putimage(x,y,texture);}
 };
-void obj::init(){
+void object::init(){
 	if(texture!=NULL)
 		delimage(texture);
 	texture=newimage();
 }
-void obj::load_texture(char file[]){
+void object::load_texture(char file[]){
 	init();
 	getimage(texture,file);
 	sx=getwidth(texture);
 	sy=getheight(texture);
 }
-void obj::load_texture(PIMAGE src,int x,int y,int w,int h){
+void object::load_texture(PIMAGE src,int x,int y,int w,int h){
 	init();
 	getimage(texture,src,x,y,w,h);
 	sx=getwidth(texture);
 	sy=getheight(texture);
 }
-void obj::resize(int dstx,int dsty){
+void object::resize(int dstx,int dsty){
 	resize_(texture,dstx,dsty,texture);
 }
 
 class movement{
 private:
+	object obj;  
 
 public:
 

@@ -11,7 +11,7 @@
 using namespace std;
 #define bgc EGERGB(150,233,233)
 
-const int mX=1280,mY=720;
+int mX=1280,mY=720;
 const int numPa=70;
 /*
 struct _initgraph
@@ -150,9 +150,15 @@ bool detect_esc(){
 		k=getkey();
 	return k.key==key_esc;
 }
-int main(){
+int main(int argc,char *argv[]){
 	srand(time(0));
-	// setinitmode(1);
+	if(argc==2){
+		printf("%s\n",argv[1]);
+		if(!strcmp(argv[1],"-full")){
+			setinitmode(1);
+			mX=1920,mY=1080;
+		}
+	}
 	initgraph(mX,mY);
 	setbkcolor(bgc);
 	setrendermode(RENDER_MANUAL);

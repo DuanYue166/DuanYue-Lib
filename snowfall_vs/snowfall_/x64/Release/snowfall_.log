@@ -1,9 +1,0 @@
-﻿  main.cpp
-D:\Github\DuanYue-Lib\snowfall_vs\snowfall\main.cpp(63,10): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-D:\Github\DuanYue-Lib\snowfall_vs\snowfall\main.cpp(64,10): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-D:\Github\DuanYue-Lib\snowfall_vs\snowfall\main.cpp(154,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
-  Previous IPDB not found, fall back to full compilation.
-  正在生成代码
-  All 20 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  已完成代码的生成
-  snowfall_.vcxproj -> D:\Github\DuanYue-Lib\snowfall_vs\x64\Release\snowfall.exe

@@ -1,5 +1,0 @@
-﻿  main.cpp
-D:\Github\DuanYue-Lib\snowfall_vs\snowfall\main.cpp(63,10): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-D:\Github\DuanYue-Lib\snowfall_vs\snowfall\main.cpp(64,10): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-D:\Github\DuanYue-Lib\snowfall_vs\snowfall\main.cpp(154,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
-  snowfall_.vcxproj -> D:\Github\DuanYue-Lib\snowfall_vs\x64\Debug\snowfall.exe

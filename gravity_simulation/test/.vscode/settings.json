@@ -6,6 +6,8 @@
 		"fstream": "cpp",
 		"istream": "cpp",
 		"ostream": "cpp",
-		"string_view": "cpp"
+		"array": "cpp",
+		"algorithm": "cpp",
+		"random": "cpp"
 	}
 }
