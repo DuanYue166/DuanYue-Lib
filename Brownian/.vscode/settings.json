@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "*.py": "python",
+        "cstdio": "cpp",
+        "*.tcc": "cpp",
+        "fstream": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "iostream": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}

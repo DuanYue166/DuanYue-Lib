@@ -3,8 +3,18 @@
 
 #include <stdio.h>
 
+#include<iostream>
+
 int main()
 {
+	// MUSIC mc1,mc2;
+	// mc1.OpenFile("bubble_generate.wav");
+	// mc1.Play();
+	// delay(500);
+	// mc2.OpenFile("bubble_burst.wav");
+	// mc2.Play();
+	// delay(1000);
+	// return 0;
         initgraph(640, 480);
 
         setrendermode(RENDER_MANUAL); //不使用自动刷新，减少闪烁 
