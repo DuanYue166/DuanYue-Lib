@@ -4,7 +4,7 @@ import time
 import os
 
 # url="https://v2.jinrishici.com/one.svg?font-size=50&spacing=1&color=purple"
-url="https://v1.jinrishici.com/rensheng.txt"
+url="https://v1.jinrishici.com/all.txt"
 head={"user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"}
 proxies={"http":"","https":""}
 
@@ -31,7 +31,7 @@ while(i<=20000):
 	temp=open("temp","w+")
 	temp.write(str(i))
 	temp.close()
-	time.sleep(0.3)
+	time.sleep(0.1)
 print("Done!")
 '''
 for i in range(1,2001):
