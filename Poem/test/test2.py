@@ -1,7 +1,9 @@
-def uni(list):
-	out=list+[2,3,3]
-	return out
+# 可写函数说明
+i=int(3)
+def changeme():
+	i=2
+	def f2():
+		nonlocal i
+changeme()
+print(i)
 
-list=[1,1,1]
-list=uni(list)
-print(list)

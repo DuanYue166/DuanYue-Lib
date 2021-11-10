@@ -2,7 +2,7 @@ from functools import wraps
  
 def logit(logfile='out.log'):
 	def logging_decorator(func):
-		@wraps(func)
+		# @wraps(func)
 		def wrapped_function(*args, **kwargs):
 			log_string = func.__name__ + " was called"
 			print(log_string)
