@@ -5,21 +5,11 @@
             "label": "C/C++: g++.exe 生成活动文件",
             "command": "C:\\MinGW64\\bin\\g++.exe",
             "args": [
+                "-fdiagnostics-color=always",
                 "-g",
-				"lib\\mylib.cpp",
-                "main.cpp",
+                "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-std=c++11",
-                "-lgraphics64",
-                "-luuid",
-                "-lmsimg32",
-                "-lgdi32",
-                "-limm32",
-                "-lole32",
-                "-loleaut32",
-                "-lwinmm",
-                "-lgdiplus",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"

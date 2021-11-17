@@ -2,17 +2,19 @@
 #include<windows.h>
 #include<iostream>
 #include<ctime>
-#include"mylib.hpp"
+#include<vector>
+#include"lib/mylib.h"
 
-#define bgc EGERGB(0xda,0xf3,0xef)
+// #define bgc EGERGB(0xda,0xf3,0xef)
+#define bgc EGERGB(0x39,0x10,0x85)
 
-int mX=1280,mY=720;
+int mX=1280,mY=720; 
 const int bubble_delay=500;
 
 struct Bubble{
 	movement item;
 };
-vector<Bubble> vec;
+std::vector<Bubble> vec;
 
 int main(int argc,char *argv[]){
 	if(argc==2 && !strcmp(argv[1],"-f")){
@@ -35,6 +37,7 @@ int main(int argc,char *argv[]){
 			bubble.obj.load_texture("res\\bubble.png");
 			bubble.setpos(px,py);
 			bubble.obj.draw(px-50,py-50,0x80);
+			// bubble.obj.draw(1,1,1);
 			mc.OpenFile("res\\bubble_burst.wav");
 			mc.Play();
 		}

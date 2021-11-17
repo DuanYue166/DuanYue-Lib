@@ -1,4 +1,12 @@
-#include<graphics.h>
+/*
+ * @Author: your name
+ * @Date: 2021-11-17 11:38:48
+ * @LastEditTime: 2021-11-17 11:45:51
+ * @LastEditors: your name
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \bubble\lib\mylib.cpp
+ */
+#include"mylib.h"
 
 bool detect_key(key_code_e ke){
 	static key_msg k;
@@ -27,28 +35,23 @@ void resize(PIMAGE src,int dstx,int dsty,PIMAGE dst){
 	dst=newimage(dstx,dsty);
 	getimage(dst,tmp,0,0,dstx,dsty);
 }
-inline void resize_(PIMAGE &src,int &dstx,int &dsty,PIMAGE &dst){
+static inline void resize_(PIMAGE &src,int &dstx,int &dsty,PIMAGE &dst){
 	resize(src,dstx,dsty,dst);
 }
 
-class object{
-private:
-	PIMAGE texture;
-	int sx,sy;			//size
-public:
-	object(){init();}
-	void init();
-	void load_texture(char []);
-	void load_texture(PIMAGE src,int x,int y,int w,int h);
-	void resize(int dstx,int dsty);
-	void draw(int x,int y,int alpha=0xff) {putimage_alphatransparent(NULL,texture,x,y,BLACK,alpha);}
-};
+object::object(){
+	init();
+}
+object::~object(){
+	if(texture!=NULL)
+		delimage(texture);
+}
 void object::init(){
 	if(texture!=NULL)
 		delimage(texture);
 	texture=newimage();
 }
-void object::load_texture(char file[]){
+void object::load_texture(LPCSTR file){
 	init();
 	getimage(texture,file);
 	sx=getwidth(texture);
@@ -63,13 +66,6 @@ void object::load_texture(PIMAGE src,int x,int y,int w,int h){
 void object::resize(int dstx,int dsty){
 	resize_(texture,dstx,dsty,texture);
 }
-
-class movement{
-private:
-
-public:
-	object obj;		//main object
-	int x,y;		//current coords
-	double vx,vy;
-	void setpos(int x_,int y_){x=x_,y=y_;}
-};
+void object::draw(int x,int y,int alpha){
+	putimage_alphatransparent(NULL,texture,x,y,BLACK,alpha);
+}
