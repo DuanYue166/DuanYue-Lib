@@ -10,9 +10,12 @@
 
 
 #include<graphics.h>
+#include<ctime>
 
 bool detect_key(key_code_e ke);
 bool mouse_left_click();
+
+void music_play(LPCSTR file);
 
 void resize(PIMAGE src,int dstx,int dsty,PIMAGE dst);
 
@@ -32,12 +35,15 @@ public:
 
 class movement{
 private:
-
-public:
-	object obj;		//main object
-	int x,y;		//current coords
+	object obj_;		//main object
+	double x,y;		//current coords
 	double vx,vy;
-	void setpos(int x_,int y_){x=x_,y=y_;}
+	clock_t las;
+public:
+	object &obj(){return obj_;}
+	void set_pos(double x_,double y_){x=x_,y=y_;las=clock();}
+	void set_v(double vx_,double vy_){vx=vx_,vy=vy_;}
+	void update();
 };
 
 

@@ -6,6 +6,8 @@
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: \bubble\lib\mylib.cpp
  */
+#include<vector>
+#include<cstdio>
 #include"mylib.h"
 
 bool detect_key(key_code_e ke){
@@ -20,6 +22,46 @@ bool mouse_left_click(){
 	static mouse_msg mk;
 	mk=getmouse();
 	return mk.is_left() && mk.is_down();
+}
+/*
+void music_play(LPCSTR file){
+	static std::vector<MUSIC> vec;
+	static int p=0;
+	if(p>=vec.size() || vec[p].GetPlayStatus()==MUSIC_MODE_PLAY){
+		MUSIC mc;
+		vec.push_back(mc);
+		p=vec.size()-1;
+	}
+	if(vec[p].IsOpen())
+		vec[p].Close();
+	vec[p].OpenFile(file);
+	vec[p].Play();
+	printf("%d played\n",p);
+	p=(p+1==vec.size() ? 0 : p+1);
+	// for(auto x:vec)
+		// printf("%d ",x.GetPlayStatus());
+	printf("\n");
+}
+*/
+/*
+*
+*
+*music.Play()只占单线程？
+void music_play(LPCSTR file){
+	static const int SZ=50;
+	MUSIC mc[SZ];
+	static int p=0;
+	mc[p].OpenFile(file);
+	mc[p].Play();
+	printf("%d ",p);
+	p=(p+1==SZ ? 0 : p+1);
+}
+*/
+
+void music_play(LPCSTR file){
+	static MUSIC mc;
+	mc.OpenFile(file);
+	mc.Play();
 }
 
 void resize(PIMAGE src,int dstx,int dsty,PIMAGE dst){
@@ -68,4 +110,11 @@ void object::resize(int dstx,int dsty){
 }
 void object::draw(int x,int y,int alpha){
 	putimage_alphatransparent(NULL,texture,x,y,BLACK,alpha);
+}
+
+void movement::update(){
+	double dt=(clock()-las)/CLOCKS_PER_SEC;
+	extern const int ppm;
+	x+=vx*dt*ppm;
+	y+=vy*dt*ppm;
 }
