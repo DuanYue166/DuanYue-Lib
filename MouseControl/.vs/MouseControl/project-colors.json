@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "8b5b2f49-6a15-4f1b-8044-adee2e6ae74a": {
+      "ProjectGuid": "8b5b2f49-6a15-4f1b-8044-adee2e6ae74a",
+      "DisplayName": "MouseControl",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
