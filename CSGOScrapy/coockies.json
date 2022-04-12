@@ -1,0 +1,43 @@
+[
+	{
+		"domain": "buff.163.com",
+		"httpOnly": false,
+		"name": "csrf_token",
+		"path": "/",
+		"secure": false,
+		"value": "ImI4NzlkMGQ4ZTVhZThlYzdhOGI2MTFhOGZlNjYzNDY5NDk1M2QzMzEi.FTW5gQ.qIvUUp2-Ygnhm8hs-qdU3Yk0Pzc"
+	},
+	{
+		"domain": "buff.163.com",
+		"httpOnly": true,
+		"name": "session",
+		"path": "/",
+		"secure": false,
+		"value": "1-ZZuxnpq6D0wsDP-VncwZPs-sA6UowNu6Lk4ocXZBT_LG2037449047"
+	},
+	{
+		"domain": "buff.163.com",
+		"httpOnly": false,
+		"name": "game",
+		"path": "/",
+		"secure": false,
+		"value": "csgo"
+	},
+	{
+		"domain": "buff.163.com",
+		"httpOnly": false,
+		"name": "Locale-Supported",
+		"path": "/",
+		"secure": false,
+		"value": "zh-Hans"
+	},
+	{
+		"domain": "buff.163.com",
+		"expiry": 4733424000,
+		"httpOnly": false,
+		"name": "Device-Id",
+		"path": "/",
+		"secure": false,
+		"value": "JitpLbMFqATKB463lPLr"
+	}
+]

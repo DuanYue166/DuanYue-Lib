@@ -6,7 +6,7 @@ graphics.h included
 #include<ctime>
 #include<iostream>
 
-extern int mX,mY;
+extern int mX,mY;	//screen size
 
 bool detect_key(key_code_e ke){
 	static key_msg k;

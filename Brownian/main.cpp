@@ -7,7 +7,7 @@
 #define FGC EGERGB(0x38,0x18,0x01)
 
 int mX=1280,mY=720;
-const int FPS=30;
+const int FPS=59;
 
 void rand_v(movement &m){
 	static double vx,vy;
